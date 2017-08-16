@@ -16,7 +16,8 @@ export default class Home extends Component {
     render() {
         return (
             <View style={css.container}>
-                <Text>Home</Text>
+                <Text style={styles.welcome}>Welcome to Temaku.co.id :)</Text>
+                <Text style={styles.welcome}>Feel free to discussion project with us at info.temaku@gmail.com</Text>
             </View>
         );
     }
@@ -24,5 +25,10 @@ export default class Home extends Component {
 
 
 export const styles = StyleSheet.create({
-
+    welcome: {
+        color: '#333',
+        fontSize: 14,
+        textAlign: 'center',
+        padding: 15,
+    },
 });
