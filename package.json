@@ -1,0 +1,28 @@
+{
+	"name": "RNAuthScreenTemplate",
+	"version": "0.0.1",
+	"private": true,
+	"scripts": {
+		"start": "node node_modules/react-native/local-cli/cli.js start",
+		"test": "jest",
+		"run": "react-native run-android",
+		"buildDebug": "(cd android/ && ./gradlew assembleDebug)",
+		"bundleDebug": "react-native bundle --platform android --dev false --entry-file index.android.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res/",
+		"buildRelease": "(cd android/ && ./gradlew assembleRelease)",
+		"bundleRelease": "react-native bundle --platform android false --entry-file index.android.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res/"
+	},
+	"dependencies": {
+		"react": "16.0.0-alpha.12",
+		"react-native": "0.47.1",
+		"react-navigation": "^1.0.0-beta.11"
+	},
+	"devDependencies": {
+		"babel-jest": "20.0.3",
+		"babel-preset-react-native": "3.0.0",
+		"jest": "20.0.4",
+		"react-test-renderer": "16.0.0-alpha.12"
+	},
+	"jest": {
+		"preset": "react-native"
+	}
+}
