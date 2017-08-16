@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import {
     StyleSheet,
     View,
+    ScrollView,
     Text,
-    Image,
-    Dimensions
+    Image
 } from 'react-native';
 
 import {css} from '../styles/Global';
@@ -19,21 +19,25 @@ export default class Login extends Component {
         super(props);
     }
 
+    redirect(route) {
+        this.props.navigation.navigate(route);
+    }
+
     render() {
         return (
             <View style={[css.container, styles.container]}>
                 <Image
-                  style={styles.bg}
+                  style={css.auth_bg}
                   source={require('../../res/img/bg.jpg')}
                   resizeMode="cover"
                   blurRadius={5}
                 />
-                <View style={styles.content}>
+                <ScrollView style={css.auth_content}>
                     <Image
-                      style={styles.logo}
+                      style={css.logo}
                       source={require('../../res/img/logo-temaku.co.id.jpg')}
                     />
-                    <Text style={styles.title}>Temaku.co.id</Text>
+                    <Text style={css.logo_title}>Temaku.co.id</Text>
                     <Textbox
                       placeholder="Username or Email"
                       keyboardType="email-address"
@@ -43,23 +47,23 @@ export default class Login extends Component {
                       secureTextEntry={true}
                     />
                     <Link
-                      onPress={() => alert('Forgot Password')}
+                      onPress={() => this.redirect('ForgotPassword')}
                       text="Forgot Password"
                     />
-                    <View style={styles.submit}>
+                    <View style={css.auth_submit}>
                         <ButtonRounded
-                          onPress={() => alert('Login')}
+                          onPress={() => this.redirect('Home')}
                           text="Login"
                         />
                     </View>
-                    <View style={styles.register_button}>
-                        <Text style={styles.register_info}>You dont have an account?</Text>
+                    <View style={css.bottom_button}>
+                        <Text style={css.bottom_info}>You dont have an account?</Text>
                         <ButtonRounded
-                          onPress={() => alert('Register')}
+                          onPress={() => this.redirect('Register')}
                           text="Register"
                         />
                     </View>
-                </View>
+                </ScrollView>
             </View>
         );
     }
@@ -69,43 +73,5 @@ export default class Login extends Component {
 export const styles = StyleSheet.create({
     container: {
         position: 'relative',
-    },
-    bg: {
-        position: 'absolute',
-        top: 0,
-        left: 0,
-        bottom: 0,
-        right: 0,
-        width: Dimensions.get('window').width,
-        height: Dimensions.get('window').height,
-    },
-    logo: {
-        alignSelf: 'center',
-        borderRadius: 100,
-        height: 80,
-        marginTop: 20,
-        width: 80,
-    },
-    title: {
-        color: '#fff',
-        textAlign: 'center',
-        fontSize: 16,
-        marginTop: 5,
-        marginBottom: 10,
-    },
-    content: {
-        paddingHorizontal: 30,
-    },
-    submit: {
-        marginTop: 15,
-    },
-    register_button: {
-        marginTop: 60,
-    },
-    register_info: {
-        color: '#fff',
-        fontSize: 14,
-        textAlign: 'center',
-        marginBottom: 5,
     },
 });

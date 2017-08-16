@@ -44,7 +44,7 @@ export const Stack = StackNavigator({
         }
     },
     Home: {
-        screen: Login,
+        screen: Home,
         navigationOptions: {
             headerStyle: {
                 backgroundColor: '#4C4949',
