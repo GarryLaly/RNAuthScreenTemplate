@@ -9,7 +9,7 @@ import {
 
 import {css} from '../styles/Global';
 
-export default class ButtonRounded extends Component {
+export default class Link extends Component {
     constructor(props) {
         super(props);
     }
@@ -18,7 +18,7 @@ export default class ButtonRounded extends Component {
         return (
             <TouchableWithoutFeedback
                 onPress={this.props.onPress}>
-                <View style={styles.button}>
+                <View>
                     <Text style={styles.caption}>
                         {this.props.text}
                     </Text>
@@ -29,17 +29,13 @@ export default class ButtonRounded extends Component {
 }
 
 export const styles = StyleSheet.create({
-    button: {
-        backgroundColor: '#23b0f9',
-        borderRadius: 100,
-        alignSelf: 'center',
-        paddingHorizontal: 20,
-        paddingTop: 10,
-        paddingBottom: 12,
-        minWidth: 200,
-    },
     caption: {
+        alignSelf: 'center',
+        borderBottomWidth: 1,
+        borderBottomColor: '#fff',
         color: '#fff',
         textAlign: 'center',
-    },
+        paddingBottom: 3,
+        margin: 10,
+    }
 });
