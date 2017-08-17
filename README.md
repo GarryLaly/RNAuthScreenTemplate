@@ -2,6 +2,8 @@
 
 Free template auth screen for your react native project. Like login screen, register screen, forgot password screen, etc.
 
+[Link Demo Playstore](https://play.google.com/store/apps/details?id=com.rnauthscreentemplate)
+
 ![](http://temaku.co.id/uploads/products/rnauthscreentemplate.png)
 
 ## Getting Started
@@ -85,4 +87,5 @@ This project is licensed under the MIT License
 
 * Stackoverflow
 * [Unsplash for Background](https://unsplash.com/photos/D6RsA8pmYko)
+* [Temaku](http://temaku.co.id)
 * etc
