@@ -6,6 +6,16 @@ Free template auth screen for your react native project. Like login screen, regi
 
 ![](http://temaku.co.id/uploads/products/rnauthscreentemplate.png)
 
+## Screenshot
+
+Login Screen
+
+![](https://lh3.googleusercontent.com/hCA3KSBiiLTMoMWWMnsXmo2xyAHfJjDP1wPl1KjSQOLreDf6oMlxWggv7F35YXzDhNuk=h900-rw)
+
+Register Screen
+
+![](https://lh3.googleusercontent.com/yhnxpv6WO6lynRKejUFEor-v7ykrZvss-6ydniE2n6KjEXIvAvD6ukGVLKYJ_M46dg=h900-rw)
+
 ## Getting Started
 
 Cloning this repo use SSH
