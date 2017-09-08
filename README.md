@@ -78,7 +78,6 @@ npm run-script bundleRelease && npm run-script buildRelease
 
 * [React Native 0.47](http://facebook.github.io/react-native/releases/0.47/) - Mobile apps framework
 * [React Navigation](https://reactnavigation.org/) - React Native Plugin
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
 
 ## Contributing
 
